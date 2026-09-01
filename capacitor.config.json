@@ -1,0 +1,9 @@
+{
+  "appId": "com.swarvijay.app",
+  "appName": "Swar Vijay",
+  "webDir": "public",
+  "server": {
+    "url": "https://vijaybodkhe.tech",
+    "cleartext": true
+  }
+}

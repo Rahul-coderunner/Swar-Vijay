@@ -1,0 +1,221 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * SWAR VIJAY MUSIC ACADEMY — OFFICIAL DESIGN TOKENS
+ * Colors, gradients, fonts, radius and shadows come from the official
+ * theme guide. Never hardcode hex values in components — use tokens.
+ */
+
+:root {
+  /* Brand */
+  --deep: #1a0a10;
+  --maroon: #7b1e35;
+  --maroon2: #9c2742;
+  --crimson: #c0344f;
+  --saffron: #e8831a;
+  --gold: #d4af37;
+  --gold2: #f0ce6a;
+
+  /* Surfaces */
+  --surface: #fffbf5;
+  --surf2: #fff5e8;
+  --surf3: #f7edd8;
+
+  /* Borders */
+  --brd: rgba(123, 30, 53, 0.14);
+  --bord2: rgba(212, 175, 55, 0.3);
+
+  /* Ink */
+  --ink: #1a0a10;
+  --ink2: #5c3042;
+  --ink3: #9b7080;
+  --white-warm: #fff8f0;
+
+  /* Status */
+  --green: #1e7a4b;
+  --green2: #25a060;
+  --wa: #25d366;
+  --indigo: #3b4fa8;
+
+  /* Gradients */
+  --g-hero: linear-gradient(145deg, #4a0e22 0%, #7b1e35 45%, #c0344f 100%);
+  --g-gold: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #f0ce6a 100%);
+  --g-green: linear-gradient(135deg, #1a5c38 0%, #25a060 100%);
+  --g-dark: linear-gradient(145deg, #120608 0%, #1a0a10 55%, #2a0e18 100%);
+
+  /* Shadows */
+  --sh-xl: 0 32px 80px -16px rgba(26, 10, 16, 0.55);
+  --sh-md: 0 10px 28px -10px rgba(26, 10, 16, 0.28);
+  --glow-g: 0 0 20px rgba(212, 175, 55, 0.4), 0 8px 24px rgba(26, 10, 16, 0.3);
+
+  /* Shape */
+  --radius: 18px;
+
+  /* shadcn semantic mapping */
+  --background: var(--surface);
+  --foreground: var(--ink);
+  --card: var(--white-warm);
+  --card-foreground: var(--ink);
+  --popover: var(--white-warm);
+  --popover-foreground: var(--ink);
+  --primary: var(--maroon);
+  --primary-foreground: var(--white-warm);
+  --secondary: var(--surf2);
+  --secondary-foreground: var(--maroon);
+  --muted: var(--surf3);
+  --muted-foreground: var(--ink3);
+  --accent: var(--surf2);
+  --accent-foreground: var(--maroon);
+  --destructive: var(--crimson);
+  --destructive-foreground: var(--white-warm);
+  --border: var(--brd);
+  --input: var(--brd);
+  --ring: var(--gold);
+  --sidebar: var(--surf2);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--maroon);
+  --sidebar-primary-foreground: var(--white-warm);
+  --sidebar-accent: var(--surf3);
+  --sidebar-accent-foreground: var(--maroon);
+  --sidebar-border: var(--brd);
+  --sidebar-ring: var(--gold);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 10px);
+  --radius-md: calc(var(--radius) - 6px);
+  --radius-lg: calc(var(--radius) - 4px);
+  --radius-xl: var(--radius);
+  --radius-2xl: calc(var(--radius) + 6px);
+
+  --color-deep: var(--deep);
+  --color-maroon: var(--maroon);
+  --color-maroon2: var(--maroon2);
+  --color-crimson: var(--crimson);
+  --color-saffron: var(--saffron);
+  --color-gold: var(--gold);
+  --color-gold2: var(--gold2);
+  --color-surface: var(--surface);
+  --color-surf2: var(--surf2);
+  --color-surf3: var(--surf3);
+  --color-ink: var(--ink);
+  --color-ink2: var(--ink2);
+  --color-ink3: var(--ink3);
+  --color-warm: var(--white-warm);
+  --color-green: var(--green);
+  --color-green2: var(--green2);
+  --color-indigo: var(--indigo);
+  --color-bord2: var(--bord2);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+  --font-marathi: "Tiro Devanagari Marathi", serif;
+
+  --shadow-md-sv: var(--sh-md);
+  --shadow-xl-sv: var(--sh-xl);
+  --shadow-glow: var(--glow-g);
+}
+
+@utility bg-hero {
+  background: var(--g-hero);
+}
+@utility bg-goldgrad {
+  background: var(--g-gold);
+}
+@utility bg-greengrad {
+  background: var(--g-green);
+}
+@utility bg-darkgrad {
+  background: var(--g-dark);
+}
+@utility text-gold-grad {
+  background: var(--g-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility card-sv {
+  background: var(--white-warm);
+  border-radius: var(--radius);
+  border: 1px solid var(--brd);
+  box-shadow: var(--sh-md);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--glow-g);
+}
+
+@utility chip-sv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surf2);
+  border: 1px solid var(--bord2);
+  color: var(--maroon);
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@layer base {
+  * {
+    border-color: var(--brd);
+  }
+
+  html {
+    font-family: var(--font-body);
+  }
+
+  body {
+    background-color: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--deep);
+  }
+
+  .mr {
+    font-family: var(--font-marathi);
+  }
+}
